@@ -1,5 +1,9 @@
-package dev.jesus.movies;
+package dev.jesus.movies.Services;
 
+import dev.jesus.movies.Entities.Movie;
+import dev.jesus.movies.Entities.Review;
+import dev.jesus.movies.Repositories.ReviewRepository;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -13,7 +17,7 @@ public class ReviewService {
 
     @Autowired
     private MongoTemplate mongoTemplate;
-    public Review createReview(String reviewBody,String imdbId) {
+    public Review createReview(String reviewBody, String imdbId) {
         Review review = reviewRepository.insert(new Review(reviewBody));
         mongoTemplate.update(Movie.class)
                 .matching(Criteria.where("imdbId").is(imdbId))
@@ -21,4 +25,5 @@ public class ReviewService {
                 .first();
         return review;
     }
+
 }

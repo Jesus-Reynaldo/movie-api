@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "beeae16f-7b56-44b0-91ae-a600972ddb5c",
+		"name": "movie-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30916083"
+	},
+	"item": [
+		{
+			"name": "Create a new review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reviewBody\":\"I really enjoyed seening the movie with my family\",\r\n    \"imdbId\":\"tt3915174\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all_movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/tt3915174",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"tt3915174"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"imdbId\": \"tt10937456\",\r\n  \"title\": \"Insidious: The Red Door\",\r\n  \"releaseDate\": \"2023-07-07\",\r\n  \"trailerLink\": \"https://www.youtube.com/watch?v=ab1ci1IWFbQ\",\r\n  \"genres\": [\r\n    \"Horror\",\r\n    \"Thriller\"\r\n  ],\r\n  \"poster\": \"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRXxM703QO6Ipbd3doRXWpbZqGzY_XphZhYGXZa004Nd0LuAtZl\",\r\n  \"backdrops\": [\r\n    \"https://image.tmdb.org/t/p/w780/i2GVEvltEu3BXn5crBSxgKuTaca.jpg\",\r\n    \"https://www.heavenofhorror.com/wp-content/uploads/2021/02/insidious-5-the-red-door.jpg\",\r\n    \"https://www.themoviedb.org/t/p/original/35n2wmgsfWdZDfy92WvBweeHNpv.jpg\"\r\n  ],\r\n  \"reviewIds\": []\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/tt10937456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"tt10937456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"title\": \"Insidious: The Red Door\",\r\n    \"releaseDate\": \"2023-07-07\",\r\n    \"trailerLink\": \"https://www.youtube.com/watch?v=ab1ci1IWFbQ\",\r\n    \"poster\": \"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRXxM703QO6Ipbd3doRXWpbZqGzY_XphZhYGXZa004Nd0LuAtZl\",\r\n    \"backdrops\": [\r\n        \"https://image.tmdb.org/t/p/w780/i2GVEvltEu3BXn5crBSxgKuTaca.jpg\",\r\n        \"https://www.heavenofhorror.com/wp-content/uploads/2021/02/insidious-5-the-red-door.jpg\",\r\n        \"https://www.themoviedb.org/t/p/original/35n2wmgsfWdZDfy92WvBweeHNpv.jpg\"\r\n    ],\r\n    \"genres\": [\r\n        \"Horror\",\r\n        \"Thriller\"\r\n    ],\r\n    \"reviewIds\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/tt10937456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"tt10937456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

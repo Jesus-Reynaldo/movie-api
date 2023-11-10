@@ -1,4 +1,4 @@
-package dev.jesus.movies;
+package dev.jesus.movies.Entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
